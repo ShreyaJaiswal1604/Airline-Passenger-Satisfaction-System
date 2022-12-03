@@ -17,7 +17,7 @@ def insertAirlineFromCsv(conn):
 
 def insertAircraftFromCsv(conn):
     print('Inserting from aircraft.rtf...')
-    rows = getRowsFromCsv('aircraft_type.rtf')
+    rows = getRowsFromCsv('aircraft.rtf')
     for aircraft in rows:
         row = aircraft.split(',')
         obj = Aircraft(row[0], row[2], row[3])
@@ -36,7 +36,6 @@ def insertAirportFromCsv(conn):
 
 def getRowsFromCsv(filename):
     rows = []
-    filename = 'airport.rtf'
     with open(filename, 'r') as file:
         for line in file:
             rows.append(line)
