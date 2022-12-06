@@ -92,7 +92,7 @@ FOREIGN KEY (airline_iata) REFERENCES airline(airline_iata)
 #Flight Schedules
 CREATE TABLE IF NOT EXISTS flight_schedule(
 schedule_id INT AUTO_INCREMENT,
-arrival_time DATETIME,
+arrflight_scheduleflight_scheduleival_time DATETIME,
 departure_time DATETIME,
 arrival_airport CHAR(3),
 departure_airport CHAR(3),
@@ -111,4 +111,22 @@ airline_iata CHAR(2),
 PRIMARY KEY (tweet_id),
 FOREIGN KEY (tweet_id) REFERENCES tweet(tweet_id),
 FOREIGN KEY (airline_iata) REFERENCES airline(airline_iata)
+);
+
+CREATE TABLE airline_review(
+airline_review_id INT NOT NULL AUTO_INCREMENT,
+iata_airline CHAR(3),
+review_title VARCHAR(255),
+review_date DATE,
+seat_comfort_rating INT,
+service_rating INT,
+food_rating INT,
+entertainment_rating INT,
+groundservice_rating INT,
+wifi_rating INT,
+value_rating INT,
+overall_score INT,
+recommended INT,
+PRIMARY KEY (airline_review_id),
+FOREIGN KEY(iata_airline) REFERENCES airline(airline_iata)
 );
