@@ -92,11 +92,12 @@ FOREIGN KEY (airline_iata) REFERENCES airline(airline_iata)
 #Flight Schedules
 CREATE TABLE IF NOT EXISTS flight_schedule(
 schedule_id INT AUTO_INCREMENT,
-arival_time DATETIME,
+arrival_time DATETIME,
 departure_time DATETIME,
 arrival_airport CHAR(3),
 departure_airport CHAR(3),
 flight_id INT,
+duration VARCHAR(7),
 PRIMARY KEY (schedule_id),
 FOREIGN KEY (arrival_airport) REFERENCES airport(airport_iata),
 FOREIGN KEY (departure_airport) REFERENCES airport(airport_iata),
