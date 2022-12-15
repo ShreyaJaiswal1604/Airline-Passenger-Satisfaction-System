@@ -117,14 +117,6 @@ JOIN airline t2
 ON t1.iata_airline = t2.iata_airline
 WHERE t2.iata_airline = "QR";
 
-#12 SELECT THE COUNT OF LIKES FOR REVIEWS GIVEN TO BRITISH AIRWAYS
-SELECT  t2.airline_name, COUNT(t1.like_count) 
-FROM tweet t1
-JOIN airline t2
-ON t1.iata_airline = t2.iata_airline
-WHERE lower(t2.airline_name) = "british airways"
-GROUP BY t2.airline_name; 
-
 #13 DISPLAY THE REVIEW COUNT, FOOD RATING FOR EVERY AIRLINE WHERE THE RATING GIVEN IS =5
 SELECT t1.airline_name, t2.food_rating, COUNT(*) as review_count
 FROM airline t1
@@ -231,4 +223,10 @@ GROUP BY t1.airline_name
 ORDER BY recommendation_count DESC
 LIMIT 1;
 
-
+#25 SELECT THE COUNT OF LIKES FOR REVIEWS GIVEN TO BRITISH AIRWAYS
+SELECT  t2.airline_name, COUNT(t1.like_count) 
+FROM tweet t1
+JOIN airline t2
+ON t1.iata_airline = t2.iata_airline
+WHERE lower(t2.airline_name) = "british airways"
+GROUP BY t2.airline_name; 
