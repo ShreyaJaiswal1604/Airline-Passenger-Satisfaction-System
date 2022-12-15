@@ -1,8 +1,18 @@
 CREATE DATABASE IF NOT EXISTS airline_passenger_system;
 
+DROP TABLE IF EXISTS `airline_passenger_system`.`tweet`;
+DROP TABLE IF EXISTS `airline_passenger_system`.`tweet_user`;
+DROP TABLE IF EXISTS `airline_passenger_system`.`flight`;
+DROP TABLE IF EXISTS `airline_passenger_system`.`aircraft`;
+DROP TABLE IF EXISTS `airline_passenger_system`.`airline_review`;
+DROP TABLE IF EXISTS `airline_passenger_system`.`airline`;
+DROP TABLE IF EXISTS `airline_passenger_system`.`airport`;
+DROP TABLE IF EXISTS `airline_passenger_system`.`city`;
+DROP TABLE IF EXISTS `airline_passenger_system`.`country_area`;
+DROP TABLE IF EXISTS `airline_passenger_system`.`country`;
+
 #TABLE 1 
 #COUNTRY
-DROP TABLE IF EXISTS `airline_passenger_system`.`country`;
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`country` (
   `country_code` VARCHAR(10) NOT NULL,
   `country_name` VARCHAR(100) NULL,
@@ -11,7 +21,6 @@ ENGINE = InnoDB;
 
 #TABLE 2 
 #COUNTRY_AREA
-DROP TABLE IF EXISTS `airline_passenger_system`.`country_area`;
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`country_area` (
   `area_code_id` VARCHAR(10) NOT NULL,
   `country_code` VARCHAR(10),
@@ -28,7 +37,6 @@ ENGINE = InnoDB;
 #TABLE 3
 #CITY
 
-DROP TABLE IF EXISTS `airline_passenger_system`.`city`;
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`city` (
   `city_code` VARCHAR(10) NOT NULL,
   `city_name` VARCHAR(100) NULL,
@@ -45,7 +53,7 @@ ENGINE = InnoDB;
 #TABLE 4
 #AIRPORT
 
-DROP TABLE IF EXISTS `airline_passenger_system`.`airport`;
+
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`airport` (
   `iata_airport` VARCHAR(10) NOT NULL,
   `icao_airport` VARCHAR(10) NULL,
@@ -70,7 +78,7 @@ ENGINE = InnoDB;
 
 #TABLE 5
 #AIRLINE
-DROP TABLE IF EXISTS `airline_passenger_system`.`airline`;
+
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`airline` (
   `iata_airline` VARCHAR(10) NOT NULL,
   `icao_airline` VARCHAR(10) NULL,
@@ -88,7 +96,7 @@ ENGINE = InnoDB;
 
 #TABLE 6
 #AIRLINE REVIEW
-DROP TABLE IF EXISTS `airline_passenger_system`.`airline_review`;
+
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`airline_review` (
   `review_id` INT NOT NULL AUTO_INCREMENT,
   `iata_airline` VARCHAR(10) NULL,
@@ -115,7 +123,6 @@ ENGINE = InnoDB;
 #TABLE 7
 #AIRCRAFT
 
-DROP TABLE IF EXISTS `airline_passenger_system`.`aircraft`;
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`aircraft` (
   `iata_aircraft` VARCHAR(10) NOT NULL,
   `icao_aircraft` VARCHAR(10) NULL,
@@ -127,7 +134,6 @@ ENGINE = InnoDB;
 #TABLE 8
 #FLIGHT
 
-DROP TABLE IF EXISTS `airline_passenger_system`.`flight`;
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`flight` (
   `flight_id` INT NOT NULL AUTO_INCREMENT,
   `flight_number` INT NULL,
@@ -151,7 +157,6 @@ ENGINE = InnoDB;
 #TABLE 9
 #TWEET_USER
 
-DROP TABLE IF EXISTS `airline_passenger_system`.`tweet_user`;
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`tweet_user` (
   `twitter_handle` VARCHAR(100) NOT NULL,
   `user_display_name` VARCHAR(150) NULL,
@@ -167,7 +172,6 @@ ENGINE = InnoDB;
 #TABLE 10
 #TWEET
 
-DROP TABLE IF EXISTS `airline_passenger_system`.`tweet`;
 CREATE TABLE IF NOT EXISTS `airline_passenger_system`.`tweet` (
   `tweet_id` BIGINT NOT NULL,
   `twitter_handle` VARCHAR(45) NULL,
