@@ -77,7 +77,8 @@ The scope of our  project includes the following
 
 <!-- ER DIAGRAM-->
 ## ER Diagram
-<img width="861" alt="image" src="https://user-images.githubusercontent.com/114602411/206616024-5238e23d-88a5-4533-bdbe-57688884efc1.png">
+![image](https://user-images.githubusercontent.com/53204171/207755917-e2c2286e-51ca-495b-b4be-73117493f76d.png)
+
 
 <!-- PROCESS COVERED -->
 ## PROCESS COVERED
