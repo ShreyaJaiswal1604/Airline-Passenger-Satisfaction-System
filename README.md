@@ -10,7 +10,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## ABOUT THE PROJECT
 <ul>
 <li>This project aims to determine the factors affecting the customer experience throughout the flight journey of the passengers and further provide
 recommendations to improve the customer experience by analyzing the data collected.
@@ -27,7 +27,7 @@ The travel experience of the passengers can be defined through services such as 
 </ul>
 
 <!-- SCOPE OF THE PROJECT -->
-## Scope of the Project
+## PROJECT SCOPE
 The scope of our  project includes the following
 <ul>
 <li>Database design</li>
@@ -36,6 +36,26 @@ The scope of our  project includes the following
 <li>Providing suitable recommendations for improving customer experience</li>
 <lu>Determining fruitful data points to analyze why an airline is succeeding/failing</li>
 </ul>
+
+## DATA SOURCES
+* Skytrax Website
+* Kayak Website
+* Twitter
+* Kaggle,csv datasets
+
+## ER Diagram
+<img width="861" alt="image" src="https://user-images.githubusercontent.com/114602411/206616024-5238e23d-88a5-4533-bdbe-57688884efc1.png">
+
+## PROCESS COVERED
+
+* Data for passenger reviews extracted from Skytrax Website.
+* Python script written in Jupyter notebookto extract data using python library Beautiful Soup,
+Scrapy, Selenium.
+* Flight Details and information extracted from Kayak Website.
+* Further Datasets collected from GitHub, Kaggle and other sources.
+* Jupyter Scripts created to cleaning, munging the extracted data.
+* Script created to populate data collected after scrapping to the Airline Database.
+
 
 
 
